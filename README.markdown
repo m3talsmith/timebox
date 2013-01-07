@@ -17,4 +17,7 @@ Clone the repository:
 git clone https://github.com/m3talsmith/timebox.git
 ```
 
-Then open index.html in any browser. It's client side, so you're good to go.
+Usage
+=====
+
+Then open index.html in any browser. It's client side, so you're good to go. Add your features, run your timers, and have a blast.
