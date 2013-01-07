@@ -59,8 +59,13 @@ function FeaturesController ( $scope, $timeout ) {
       }
     };
 
+    feature.formattedRunningTime = function () {
+      if ( !feature.runningTime ) feature.resetRunningTime ();
+      return (new Date).clearTime().addSeconds(feature.runningTime).toString('mm:ss');
+    };
+
     feature.resetRunningTime = function () {
-      feature.runningTime = '15';
+      feature.runningTime = '900';
       feature.calculateRunningTime ();
     };
 

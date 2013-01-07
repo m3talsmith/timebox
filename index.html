@@ -5,7 +5,9 @@
     <title>Timebox</title>
     <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js' type='text/javascript'></script>
 
+    <script src='date.js'></script>
     <script src='features.js'></script>
+
     <link rel='stylesheet' href='features.css' />
   </head>
   <body>
@@ -32,7 +34,7 @@
           <div class='timeboxes'>
             <button ng-click='feature.startTimer ()' ng-show='!feature.timerRunning'>Start</button>
             <button ng-click='feature.stopTimer ()' ng-show='feature.timerRunning'>Stop</button>
-            <strong>{{feature.runningTime}}</strong>
+            <strong>{{feature.formattedRunningTime ()}}</strong>
             <span class='timebox {{timebox.status}}' ng-repeat='timebox in feature.timeboxes'>{{timebox.id}}</span>
           </div>
         </div>
